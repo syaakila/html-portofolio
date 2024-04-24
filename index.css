@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+}
+
+.sidebar img {
+    width: 100%;
+    height: auto;
+}
+
+.sidebar p {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.ntah {
+    float: left;
+    height: 350px;
+    width: 240px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+}
+
+.text {
+    text-align: center;
+    font-size: 15px;
+    padding-top: 130px;
+}
+
+.page {
+    clear: left;
+    margin-bottom: 100px;
+}
+
+.page h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    width: calc(100% - 250px);
+    background-color: #e2dfdf;
+}
+
+.main-content h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.main-content hr {
+    margin-bottom: 20px;
+}
+
+.footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.page table th {
+    font-size: 20px;
+}
+
+.page table td {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: sticky;
+        padding-bottom: 20px;
+    }
+
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .sidebar ul {
+        text-align: center;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 10px;
+    }
+
+    .sidebar p {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .sidebar img {
+        max-width: 130px;
+        margin: 0 auto;
+        display: block;
+        float: left;
+    }
+
+    .main-content h1 {
+        font-size: 1.5em;
+    }
+
+    .main-content hr {
+        margin-bottom: 10px;
+    }
+
+    .page {
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 999;
+    }
+}
